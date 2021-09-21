@@ -1,0 +1,59 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}
+    OneBook
+{% endblock title %}
+{% block content %}
+<div class="wrapper text-center mt-5">
+    <h1 class="book_name"> <b>{{ object.book_name }}</b> </h1>
+</div>
+<div class="row mt-5">
+    <div class="col-md-3">
+        <a href="{{ object.book_cover.url }}" class="">
+            <img src="{{ object.book_cover.url }}"  alt="BookCover" height="320" class="w-75">
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a href="{{ object.book_cover1.url }}" class="">
+            <img src="{{ object.book_cover1.url }}"  alt="BookCover" height="320" class="w-75">
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a href="{{ object.book_cover2.url }}" class="">
+            <img src="{{ object.book_cover2.url }}"  alt="BookCover" height="320" class="w-75">
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a href="{{ object.book_cover3.url }}" class="">
+            <img src="{{ object.book_cover3.url }}"  alt="BookCover" height="320" class="w-75">
+        </a>
+    </div>
+</div>
+<table class="table mt-5">
+    <tbody>
+        <tr>
+            <th>Author_name</th>
+            <td><a href="{% url 'Books:Author' slug=object.author.first_name %}">{{object.author}}</a></td>
+        </tr>
+        <tr>
+            <th>Book_name</th>
+            <td>{{object.book_name}}</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>{{object.description}}</td>
+        </tr>
+        <tr>
+            <th>Published_date</th>
+            <td>{{object.pup_date}}</td>
+        </tr>
+        <tr>
+            <th>Added_date_to_Database</th>
+            <td>{{object.added_date}}</td>
+        </tr>
+
+    </tbody>
+</table>
+{% endblock content %}
+
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dicta dignissimos commodi soluta nemo doloremque vel nostrum esse optio atque beatae amet molestiae delectus, quo rerum perspiciatis officia minima natus voluptatum. Eos veniam, accusamus mollitia dolores consequatur nulla doloribus voluptate adipisci perferendis dolore ipsa labore aspernatur excepturi laborum ipsum ab.

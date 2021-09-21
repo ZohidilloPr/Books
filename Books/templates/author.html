@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}
+    OneBook
+{% endblock title %}
+{% block content %}
+
+<table class="table mt-5">
+    <tbody>
+        <tr>
+            <th>Author_Full_Name</th>
+            <td>{{object.first_name}} {{object.last_name}}</td>
+        </tr>
+        <tr>
+            <th>Birth_date</th>
+            <td>{{object.birth_date}}</td>
+        </tr>
+        <tr>
+            <th>About_Author</th>
+            <td class="text-right"><span>{{object.description}}</span></td>
+        </tr>
+        <tr>
+            <th>Added_date_to_Database</th>
+            <td>{{object.added_date}}</td>
+        </tr>
+
+    </tbody>
+</table>
+{% endblock content %}
+
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dicta dignissimos commodi soluta nemo doloremque vel nostrum esse optio atque beatae amet molestiae delectus, quo rerum perspiciatis officia minima natus voluptatum. Eos veniam, accusamus mollitia dolores consequatur nulla doloribus voluptate adipisci perferendis dolore ipsa labore aspernatur excepturi laborum ipsum ab.
